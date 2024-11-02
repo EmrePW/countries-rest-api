@@ -1,9 +1,18 @@
 <section class="search-and-filter">
   <div class="search-wrap">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="text" id="search-box" placeholder="Search for a country..." />
+    <input
+      type="text"
+      id="search-box"
+      (keyup)="searchCountry()"
+      placeholder="Search for a country..."
+      #search_box
+    />
   </div>
-  <nav class="dropdown">Filter by Region</nav>
+  <nav class="dropdown">
+    Filter by Region
+    <i class="fa-solid fa-angle-down"></i>
+  </nav>
 </section>
 <section class="countries">
   <div class="country-card" *ngFor="let country of countries">

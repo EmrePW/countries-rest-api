@@ -6,10 +6,12 @@
 }
 
 .search-wrap {
+  display: flex;
+  align-items: center;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   box-shadow: 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  flex-basis: 30%;
+  flex-basis: 35%;
 }
 
 #search-box {
@@ -23,6 +25,9 @@
 }
 
 .dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
   width: clamp(10rem, 15%, 12rem);
   height: 100%;
   box-shadow: 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
