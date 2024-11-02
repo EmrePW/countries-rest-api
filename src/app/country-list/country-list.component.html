@@ -9,10 +9,17 @@
       #search_box
     />
   </div>
-  <nav class="dropdown">
+  <nav class="dropdown" (click)="showDropdown()">
     Filter by Region
     <i class="fa-solid fa-angle-down"></i>
   </nav>
+  <ul role="navigation" class="dropdown-menu hidden">
+    <li><button (click)="dropdownFilter('Africa')">Africa</button></li>
+    <li><button (click)="dropdownFilter('Americas')">America</button></li>
+    <li><button (click)="dropdownFilter('Asia')">Asia</button></li>
+    <li><button (click)="dropdownFilter('Europe')">Europe</button></li>
+    <li><button (click)="dropdownFilter('Oceania')">Oceania</button></li>
+  </ul>
 </section>
 <section class="countries">
   <div class="country-card" *ngFor="let country of countries">
