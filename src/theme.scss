@@ -1,0 +1,13 @@
+[data-theme="light"] {
+  --body-bg: hsl(0, 0%, 98%);
+  --header-bg: hsl(0, 0%, 100%);
+  --header-text: hsl(200, 15%, 8%);
+  --box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --body-bg: hsl(207, 26%, 17%);
+  --header-bg: hsl(209, 23%, 22%);
+  --header-text: hsl(0, 0%, 100%);
+  --box-shadow: rgba(0, 0, 0, 0.1);
+}

@@ -1,9 +1,13 @@
 <header>
   <div class="header-wrap">
     <h1 class="fw-800">Where in the world?</h1>
-    <button class="theme-switch fw-600">
+    <button class="theme-switch fw-600" (click)="changeTheme()">
       <i
-        class="fa-regular fa-moon fa-rotate-by"
+        [class]="[
+          darkModeActive ? 'fa-regular' : 'fa-solid',
+          'fa-moon',
+          'fa-rotate-by'
+        ]"
         style="--fa-rotate-angle: -25deg"
       ></i>
       Dark Mode

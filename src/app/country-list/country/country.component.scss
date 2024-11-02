@@ -8,12 +8,15 @@
   margin-block: 5rem;
   text-decoration: none;
   border-radius: 0.375rem;
+  background-color: var(--header-bg);
+  color: var(--header-text);
 }
 
 .details {
   display: flex;
   justify-content: space-between;
   gap: 4rem;
+  color: var(--header-text);
 }
 
 .flag {
@@ -62,9 +65,11 @@
   gap: 0.5rem;
 }
 .neighbour-btn {
+  border: 0;
+  color: var(--header-text);
+  background-color: var(--header-bg);
   cursor: pointer;
   background: 0;
-  border: 0;
   box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.2);
   padding: 0.25rem 1rem;
 }

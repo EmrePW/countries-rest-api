@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CountryService } from './country.service';
-import { Country } from './country';
 import { CommonModule } from '@angular/common';
 import { CountryListComponent } from './country-list/country-list.component';
 
@@ -17,4 +16,12 @@ export class AppComponent {
 
   darkModeActive: boolean = true;
   constructor(private countryService: CountryService) {}
+  changeTheme() {
+    this.darkModeActive = !this.darkModeActive;
+
+    document.body.setAttribute(
+      'data-theme',
+      this.darkModeActive ? 'dark' : 'light'
+    );
+  }
 }
