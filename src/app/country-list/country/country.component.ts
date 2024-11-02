@@ -21,7 +21,12 @@ export class CountryComponent {
     this.country = this.countryService.getCountryByCCode(ccode);
   }
   resolveNeighbourName(neigbour: string): string {
-    return this.countryService.getCountryByCCode(neigbour)?.name ?? '';
+    let resolvedName =
+      this.countryService.getCountryByCCode(neigbour)?.name ?? '';
+    if (resolvedName.length > 12) {
+      resolvedName = resolvedName.substring(0, 12) + '...';
+    }
+    return resolvedName;
   }
   formatPopulation(arg0: number | undefined) {
     return Number(arg0).toLocaleString();

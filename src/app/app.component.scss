@@ -26,3 +26,12 @@ header {
 main {
   padding-inline: 4rem;
 }
+
+.theme-switch {
+  cursor: pointer;
+  display: inline-flex;
+  border: 0;
+  background: 0;
+  padding: 0.5rem 2rem;
+  gap: 0.5rem;
+}
