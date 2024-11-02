@@ -1,3 +1,12 @@
-<div *ngFor="let country of countries">
-  {{ country.name }}
-</div>
+<header>
+  <div class="header-wrap">
+    <h1>Where in the world?</h1>
+    <button>
+      <i class="fa-regular fa-moon"></i>
+      Dark Mode
+    </button>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

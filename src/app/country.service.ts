@@ -15,4 +15,11 @@ export class CountryService {
       this.countries.next(subscriber);
     });
   }
+
+  getCountryByCCode(ccode: string): Country | undefined {
+    return (
+      this.countries.value?.find((cntry) => cntry.alpha3Code == ccode) ??
+      undefined
+    );
+  }
 }

@@ -1,1 +1,47 @@
-<p>country works!</p>
+<a routerLink="/"> Back </a>
+<section class="details">
+  <section class="flag">
+    <img [src]="country?.flag" alt="" />
+  </section>
+  <section class="info">
+    <h1 class="info-header">{{ country?.name }}</h1>
+    <section class="info-body">
+      <section>
+        <div><b>Native Name: </b>{{ country?.nativeName }}</div>
+        <div>
+          <b>Population: </b>{{ formatPopulation(country?.population) }}
+        </div>
+        <div><b>Region: </b>{{ country?.region }}</div>
+        <div><b>Sub Region: </b>{{ country?.subregion }}</div>
+        <div><b>Capital: </b>{{ country?.capital }}</div>
+      </section>
+      <section>
+        <div><b>Top Level Domain: </b>{{ country?.topLevelDomain }}</div>
+        <div>
+          <b>Currencies: </b
+          ><span *ngFor="let currency of country?.currencies"
+            >{{ currency.symbol }} {{ currency.name }},
+          </span>
+        </div>
+        <div>
+          <b>Languages: </b>
+          <span *ngFor="let language of country?.languages">
+            {{ language.name }},
+          </span>
+        </div>
+      </section>
+    </section>
+    <section class="info-neighours">
+      <b>Border Countries: </b>
+      <section>
+        <button
+          (click)="changeCountry(neighbour)"
+          [routerLink]="['/', neighbour]"
+          *ngFor="let neighbour of country?.borders"
+        >
+          {{ resolveNeighbourName(neighbour) }}
+        </button>
+      </section>
+    </section>
+  </section>
+</section>

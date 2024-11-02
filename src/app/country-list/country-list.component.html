@@ -1,1 +1,30 @@
-<p>country-list works!</p>
+<section class="search-and-filter">
+  <div class="search-wrap">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="search-box" placeholder="Search for a country..." />
+  </div>
+  <nav class="dropdown">Filter by Region</nav>
+</section>
+<section class="countries">
+  <div class="country-card" *ngFor="let country of countries">
+    <a [routerLink]="country.alpha3Code">
+      <img class="country-flag" [src]="country.flag" alt="" />
+    </a>
+    <section class="country-info">
+      <h3>{{ country.name }}</h3>
+      <div>
+        <b>Population:</b>
+        {{ country.population.toLocaleString() }}
+      </div>
+      <div>
+        <b>Region:</b>
+        {{ country.region }}
+      </div>
+      <div>
+        <b>Capital:</b>
+        {{ country.capital }}
+      </div>
+    </section>
+  </div>
+</section>
+<section class="pagination"></section>
